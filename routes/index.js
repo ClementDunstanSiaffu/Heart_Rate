@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Heart_Rate = mongoose.model("HEART_RATE")
 
 exports.leta = (req,res)=>{
-    const {heartRate,temperature} = req.params
+    const {temperature,heartRate} = req.params
     const heart_rate = new Heart_Rate()
     const date = new Date()
     const currentDate = date.toLocaleDateString("en-us",{timeZone:"Africa/Nairobi"})
